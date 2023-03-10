@@ -9,13 +9,13 @@ class contas():
     self.pi = sci.pi
 
   def show(self, em, bm, i, f, lamb, k, omg):
-    print(f'EM: {em:.3}')
-    print(f'BM: {bm:.3}')
-    print(f'INTEN: {i:.3}')
-    print(f'FREQ: {f:.3}')
-    print(f'LAMB: {lamb:.3}')
-    print(f'K: {k:.3}')
-    print(f'OMG: {omg:.3}')
+    print(f'EM: {em:.3} V/m')
+    print(f'BM: {bm:.3} T')
+    print(f'INTENSIDADE: {i:.3} W/m²')
+    print(f'FREQ: {f:.3} Hz')
+    print(f'LAMB: {lamb:.3} m')
+    print(f'NÚMERO DE ONDA: {k:.3} m⁻¹')
+    print(f'OEMGA: {omg:.3} rad/s')
 
   def Em(self, em):
     bm = em / self.c
@@ -23,8 +23,8 @@ class contas():
     self.show(em, bm, i, 0.0, 0.0, 0.0, 0.0)
 
   def Bm(self, bm):
-    em = bm / self.c
-    i = pow(bm * self.c, 2) / (2 * self.u * self.c)
+    em = bm * self.c
+    i = pow(bm, 2) * self.c/ (2 * self.u)
     self.show(em, bm, i, 0.0, 0.0, 0.0, 0.0)
 
   def inten(self, i):
@@ -60,6 +60,8 @@ conta = contas()
 
 while True:
   print('''
+  Escolha qual variável você possuir:
+
   1 - EM
   2 - BM
   3 - INTEN
@@ -70,33 +72,20 @@ while True:
   ''')
   op = int(input('Opção: '))
   if op == 1:
-    val = float(input('EM: '))
-    exp = int(input('Expoente: '))
-    conta.Em(val * pow(10, exp))
+
+    conta.Em(float(input('Valor:')))
   elif op == 2:
-    val = float(input('EM: '))
-    exp = int(input('Expoente: '))
-    conta.Bm(val * pow(10, exp))    
+    conta.Bm(float(input('Valor:')))    
   elif op == 3:
-    val = float(input('INTEN: '))
-    exp = int(input('Expoente: '))
-    conta.inten(val * pow(10, exp))
+    conta.inten(float(input('Valor:')))
   elif op == 4:
-    val = float(input('FREQ: '))
-    exp = int(input('Expoente: '))
-    conta.freq(val * pow(10, exp))
+    conta.freq(float(input('Valor:')))
   elif op == 5:
-    val = float(input('LAMB: '))
-    exp = int(input('Expoente: '))
-    conta.lamb(val * pow(10, exp))
+    conta.lamb(float(input('Valor:')))
   elif op == 6:
-    val = float(input('K: '))
-    exp = int(input('Expoente: '))
-    conta.k(val * pow(10, exp))
+    conta.k(float(input('Valor:')))
   elif op == 7:
-    val = float(input('OMG: '))
-    exp = int(input('Expoente: '))
-    conta.omg(val * pow(10, exp))
+    conta.omg(float(input('Valor:')))
   else:
     print('Opção inválida')
     continue

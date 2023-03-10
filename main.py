@@ -58,9 +58,31 @@ class contas():
 
 conta = contas()
 
+print('''
+Integrantes:
+  Cauan Sousa RA: 24.122.089-6
+  Felipe Orlando Lanzara RA: 24.122.055-7
+  Pedro Barbosa Ribeiro RA: 24.122.048-2
+  ''')
+
+print('''
+Este programa tem como objetivo calcular as variáveis de um campo eletromagnético de acordo com as variáveis que você possuir.
+Como por exemplo se você possuir a frequência, o programa calculará o comprimento de onda, o número de onda e a frequência angular.
+E assim para as outras variáveis existentes.
+
+Sobre a teoria, farei uma breve explicação de cada variável e suas fórmulas: 
+EM: É a intensidade do campo elétrico, e pode ser calculada pela fórmula EM = BM * C, onde C é a velocidade da luz.
+BM: É a intensidade do campo magnético, e pode ser calculada pela fórmula BM = EM / C, onde C é a velocidade da luz.
+INTENSIDADE: É a intensidade do campo eletromagnético, e pode ser calculada pela fórmula INTENSIDADE = (EM * EM) / (2 * U * C), onde U é a permeabilidade do vácuo.
+FREQ: É a frequência do campo eletromagnético, e pode ser calculada pela fórmula FREQ = C / LAMB, onde LAMB é o comprimento de onda.
+LAMB: É o comprimento de onda do campo eletromagnético, e pode ser calculada pela fórmula LAMB = C / FREQ, onde FREQ é a frequência.
+NÚMERO DE ONDA: É o número de onda do campo eletromagnético, e pode ser calculada pela fórmula NÚMERO DE ONDA = (2 * PI * FREQ) / C, onde PI é o número pi e C é a velocidade da luz.
+OMEGA: É a frequência angular do campo eletromagnético, e pode ser calculada pela fórmula OMEGA = (2 * PI * FREQ).
+''')
+
 while True:
   print('''
-  Escolha qual variável você possuir:
+  Escolha a variável você possui:
 
   1 - EM
   2 - BM

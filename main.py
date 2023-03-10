@@ -72,7 +72,6 @@ while True:
   ''')
   op = int(input('Opção: '))
   if op == 1:
-
     conta.Em(float(input('Valor:')))
   elif op == 2:
     conta.Bm(float(input('Valor:')))    

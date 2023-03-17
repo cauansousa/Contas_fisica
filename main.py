@@ -1,6 +1,29 @@
 import scipy.constants as sci
 import math
 
+#𝐸𝑦 (𝑥,𝑡) = 𝐸𝑚*sin (𝑘𝑥 − 𝜔t) em V/m"
+
+#Bz (𝑥,𝑡) = B𝑚*sin (𝑘𝑥 − 𝜔t) em T")
+
+#𝐸𝑦 (𝑥,𝑡) = 𝐸𝑚ax*cos (𝑘𝑥 − 𝜔t) em V/m (onda se propaga no sentido +x)"
+
+#Bz (𝑥,𝑡) = B𝑚ax*cos (𝑘𝑥 − 𝜔t) em T (onda se propaga no sentido +x)"
+
+#𝐸𝑦 (𝑥,𝑡) = 𝐸𝑚ax*cos (𝑘𝑥 + 𝜔t) em V/m (onda se propaga no sentido -x)"
+
+#𝐸𝑦 (𝑥,𝑡) = ^j𝐸𝑚*sin (𝑘𝑥 − 𝜔t) em V/m"
+
+#Bz (𝑥,𝑡) = ^kB𝑚*sin (𝑘𝑥 − 𝜔t) em T"
+
+#quando der MV/m = V/mE+6
+
+#quando pedir MV/m = V/mE-6
+
+#quando pedir em mT = TE+3
+
+# i x j = k
+# j x k = i
+# j x i = j
 
 class contas():
   def __init__(self):

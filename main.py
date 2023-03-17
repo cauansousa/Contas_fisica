@@ -25,6 +25,8 @@ import math
 # j x k = i
 # j x i = j
 
+# k +- () = i
+
 class contas():
   def __init__(self):
     self.c = sci.c
@@ -37,7 +39,7 @@ class contas():
     print(f'INTENSIDADE: {i:.3} W/m²')
     print(f'FREQ: {f:.3} Hz')
     print(f'LAMB: {lamb:.3} m')
-    print(f'NÚMERO DE ONDA: {k:.3} m⁻¹')
+    print(f'NÚMERO DE ONDA: {k:.3} rad/m⁻¹')
     print(f'OEMGA: {omg:.3} rad/s')
 
   def Em(self, em):

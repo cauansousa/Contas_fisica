@@ -195,12 +195,12 @@ while True:
     n = int(input('Digite o valor de n: '))
     print('''
     Resultados:
-    Rn = {} m
-    Vn = {} m/s
-    Lambda = {} m
-    E = {} eV
-    K = {} eV
-    U = {} eV
+    Rn = {:.3e} m
+    Vn = {:.3e} m/s
+    Lambda = {:.3e} m
+    E = {:.3e} eV
+    K = {:.3e} eV
+    U = {:.3e} eV
     '''.format(rn(n),vn(n),lambn(n), En(n), Kn(n), Un(n)))
   elif op == 2:
     x = int(input('''
@@ -216,41 +216,41 @@ while True:
       nf = int(input('Digite o valor de nf: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      ffóton = {} Hz
-      lambfóton = {} m
+      Efóton = {:.3e} eV
+      ffóton = {:.3e} Hz
+      lambfóton = {:.3e} m
       '''.format(Efotonem(ni, nf), ffotonem(ni, nf), lambfotonem(ni, nf)))
     elif x == 2:
       ni = int(input('Digite o valor de ni: '))
       f = float(input('Digite o valor de f: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      lambfóton = {} m
+      Efóton = {:.3e} eV
+      lambfóton = {:.3e} m
       '''.format(Efotonem(ni, nf_ni_f_em(ni, f)), lambfotonem(ni, nf_ni_f_em(ni, f))))
     elif x == 3:
       ni = int(input('Digite o valor de ni: '))
       lamb = float(input('Digite o valor de lamb: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      ffóton = {} Hz
+      Efóton = {:.3e} eV
+      ffóton = {:.3e} Hz
       '''.format(Efotonem(ni, nf_ni_lamb_em(ni, lamb)), ffotonem(ni, nf_ni_lamb_em(ni, lamb))))
     elif x == 4:
       nf = int(input('Digite o valor de nf: '))
       f = float(input('Digite o valor de f: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      lambfóton = {} m
+      Efóton = {:.3e} eV
+      lambfóton = {:.3e} m
       '''.format(Efotonem(ni_nf_f_em(nf, f), nf), lambfotonem(ni_nf_f_em(nf, f), nf)))
     elif x == 5:
       nf = int(input('Digite o valor de nf: '))
       lamb = float(input('Digite o valor de lamb: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      ffóton = {} Hz
+      Efóton = {:.3e} eV
+      ffóton = {:.3e} Hz
       '''.format(Efotonem(ni_nf_lamb_em(nf, lamb), nf), ffotonem(ni_nf_lamb_em(nf, lamb), nf)))
   elif op == 3:
     x = int(input('''
@@ -266,41 +266,41 @@ while True:
       nf = int(input('Digite o valor de nf: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      ffóton = {} Hz
-      lambfóton = {} m
+      Efóton = {:.3e} eV
+      ffóton = {:.3e} Hz
+      lambfóton = {:.3e} m
       '''.format(Efotonab(ni, nf), ffotonab(ni, nf), lambfotonab(ni, nf)))
     elif x == 2:
       ni = int(input('Digite o valor de ni: '))
       f = float(input('Digite o valor de f: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      lambfóton = {} m
+      Efóton = {:.3e} eV
+      lambfóton = {:.3e} m
       '''.format(Efotonab(ni, nf_ni_f_ab(ni, f)), lambfotonab(ni, nf_ni_f_ab(ni, f))))
     elif x == 3:
       ni = int(input('Digite o valor de ni: '))
       lamb = float(input('Digite o valor de lamb: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      ffóton = {} Hz
+      Efóton = {:.3e} eV
+      ffóton = {:.3e} Hz
       '''.format(Efotonab(ni, nf_ni_lamb_ab(ni, lamb)), ffotonab(ni, nf_ni_lamb_ab(ni, lamb))))
     elif x == 4:
       nf = int(input('Digite o valor de nf: '))
       f = float(input('Digite o valor de f: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      lambfóton = {} m
+      Efóton = {:.3e} eV
+      lambfóton = {:.3e} m
       '''.format(Efotonab(ni_nf_f_ab(nf, f), nf), lambfotonab(ni_nf_f_ab(nf, f), nf)))
     elif x == 5:
       nf = int(input('Digite o valor de nf: '))
       lamb = float(input('Digite o valor de lamb: '))
       print('''
       Resultados:
-      Efóton = {} eV
-      ffóton = {} Hz
+      Efóton = {:.3e} eV
+      ffóton = {:.3e} Hz
       '''.format(Efotonab(ni_nf_lamb_ab(nf, lamb), nf), ffotonab(ni_nf_lamb_ab(nf, lamb), nf)))
   elif op == 4:
     break

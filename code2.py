@@ -1,9 +1,5 @@
 from math import sqrt
 
-
-
-
-
 # PROPRIEDADES DO ÁTOMO DE H
 # ENTRADA PELO TECLADO: n
 # SAÍDA: rn, vn, lambn, Kn, Un, En
@@ -188,9 +184,125 @@ def ni_nf_lamb_em(nf, lamb): # correto
   ni = sqrt(-13.6/Einicial)
   return round(ni)
 
-
-a = nf_ni_lamb_em(3, 102.6397e-9)
-print(a)
-#print(f'a: {a:.3}')
-
 while True:
+  op = int(input('''
+  1 - Propiedades do átomo de Hidrogênio
+  2 - Emissão de fóton pelo H
+  3 - Absorção de fóton pelo H
+  4 - Sair
+  '''))
+  if op == 1:
+    n = int(input('Digite o valor de n: '))
+    print('''
+    Resultados:
+    Rn = {} m
+    Vn = {} m/s
+    Lambda = {} m
+    E = {} eV
+    K = {} eV
+    U = {} eV
+    '''.format(rn(n),vn(n),lambn(n), En(n), Kn(n), Un(n)))
+  elif op == 2:
+    x = int(input('''
+    Você tem:
+    1 - ni e nf
+    2 - ni e f
+    3 - ni e lamb
+    4 - nf e f
+    5 - nf e lamb
+    '''))
+    if x == 1:
+      ni = int(input('Digite o valor de ni: '))
+      nf = int(input('Digite o valor de nf: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      ffóton = {} Hz
+      lambfóton = {} m
+      '''.format(Efotonem(ni, nf), ffotonem(ni, nf), lambfotonem(ni, nf)))
+    elif x == 2:
+      ni = int(input('Digite o valor de ni: '))
+      f = float(input('Digite o valor de f: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      lambfóton = {} m
+      '''.format(Efotonem(ni, nf_ni_f_em(ni, f)), lambfotonem(ni, nf_ni_f_em(ni, f))))
+    elif x == 3:
+      ni = int(input('Digite o valor de ni: '))
+      lamb = float(input('Digite o valor de lamb: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      ffóton = {} Hz
+      '''.format(Efotonem(ni, nf_ni_lamb_em(ni, lamb)), ffotonem(ni, nf_ni_lamb_em(ni, lamb))))
+    elif x == 4:
+      nf = int(input('Digite o valor de nf: '))
+      f = float(input('Digite o valor de f: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      lambfóton = {} m
+      '''.format(Efotonem(ni_nf_f_em(nf, f), nf), lambfotonem(ni_nf_f_em(nf, f), nf)))
+    elif x == 5:
+      nf = int(input('Digite o valor de nf: '))
+      lamb = float(input('Digite o valor de lamb: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      ffóton = {} Hz
+      '''.format(Efotonem(ni_nf_lamb_em(nf, lamb), nf), ffotonem(ni_nf_lamb_em(nf, lamb), nf)))
+  elif op == 3:
+    x = int(input('''
+    Você tem:
+    1 - ni e nf
+    2 - ni e f
+    3 - ni e lamb
+    4 - nf e f
+    5 - nf e lamb
+    '''))
+    if x == 1:
+      ni = int(input('Digite o valor de ni: '))
+      nf = int(input('Digite o valor de nf: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      ffóton = {} Hz
+      lambfóton = {} m
+      '''.format(Efotonab(ni, nf), ffotonab(ni, nf), lambfotonab(ni, nf)))
+    elif x == 2:
+      ni = int(input('Digite o valor de ni: '))
+      f = float(input('Digite o valor de f: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      lambfóton = {} m
+      '''.format(Efotonab(ni, nf_ni_f_ab(ni, f)), lambfotonab(ni, nf_ni_f_ab(ni, f))))
+    elif x == 3:
+      ni = int(input('Digite o valor de ni: '))
+      lamb = float(input('Digite o valor de lamb: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      ffóton = {} Hz
+      '''.format(Efotonab(ni, nf_ni_lamb_ab(ni, lamb)), ffotonab(ni, nf_ni_lamb_ab(ni, lamb))))
+    elif x == 4:
+      nf = int(input('Digite o valor de nf: '))
+      f = float(input('Digite o valor de f: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      lambfóton = {} m
+      '''.format(Efotonab(ni_nf_f_ab(nf, f), nf), lambfotonab(ni_nf_f_ab(nf, f), nf)))
+    elif x == 5:
+      nf = int(input('Digite o valor de nf: '))
+      lamb = float(input('Digite o valor de lamb: '))
+      print('''
+      Resultados:
+      Efóton = {} eV
+      ffóton = {} Hz
+      '''.format(Efotonab(ni_nf_lamb_ab(nf, lamb), nf), ffotonab(ni_nf_lamb_ab(nf, lamb), nf)))
+  elif op == 4:
+    break
+  else:
+    print('Opção inválida!')

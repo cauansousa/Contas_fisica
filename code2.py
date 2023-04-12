@@ -47,7 +47,12 @@ def En(n): # correto
   En = -13.6 / (pow(n, 2))
   return En
 
-  
+def descobre_n_lamb(lamb):
+  foton = ((h*c) / (lamb))
+  ef = (-13.6 - foton)
+  n = sqrt(13.6 / abs(ef))
+  print("asdasdasda",n)
+  return n  
 
 # ABSORÇÃO DE FÓTON PELO H
 # ENTRADA: ninicial, nfinal
@@ -185,12 +190,13 @@ def ni_nf_lamb_em(nf, lamb): # correto
   return round(ni)
 
 while True:
-  try:
+  #try:
     op = int(input('''
     1 - Propiedades do átomo de Hidrogênio
     2 - Emissão de fóton pelo H
     3 - Absorção de fóton pelo H
-    4 - Sair
+    4 - transformaçoes
+    5 - Sair
     '''))
     if op == 1:
       n = int(input('Digite o valor de n: '))
@@ -314,9 +320,25 @@ while True:
         '''.format(Efotonab(ni_nf_lamb_ab(nf, lamb), nf), ffotonab(ni_nf_lamb_ab(nf, lamb), nf)))
         input("Pressione uma tecla para continuar...")
     elif op == 4:
+      print('''
+      Você tem:
+      1 - lambda para nivel
+      2 - frequencia para nivel
+      ''')
+      x = int(input('Digite a opção: '))
+      if x == 1:
+        lmb = float(input('Digite o valor de lambda: '))
+        print('''
+        nivel = {:.3e}
+        '''.format(descobre_n_lamb(lmb)))
+      elif x == 2:
+        pass
+      else:
+        print('Opção inválida!')
+    elif op == 5:
       break
     else:
       print('Opção inválida!')
-  except:
-    print("Houve um erro! Tente novamente.")
-    input("Pressione uma tecla para continuar...")
+  # except:
+  #   print("Houve um erro! Tente novamente.")
+  #   input("Pressione uma tecla para continuar...")

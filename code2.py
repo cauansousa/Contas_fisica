@@ -42,10 +42,12 @@ pi = 3.1415
 c = 3e8
 R = 1.097e7
 
+#Calcular menor frequencia significa o maior comprimento de onda, logo, soma 1 no n
+#Calcular maior frequencia significa o menor comprimento de onda, logo, substitui N por 0, sendo assim, ignorar o n
 
 def espectro(n, i):  # correto
   lamb = 1 / (1.097e7 * ((1 / (i * i)) - (1 / (n * n))))
-  return lamb
+  return lamb - 1
 
 
 def rn(n):  # correto
